@@ -41,6 +41,11 @@ def load_llm(huggingface_repo_id, HF_TOKEN):
 
 def main():
     st.title("Healthcare Chatbot!")
+        with st.sidebar:
+        st.header('⚠️ Disclaimer:')
+        st.markdown("""
+        **Note**: This chatbot provides general medical info and is not a substitute for professional medical advice. Always consult your doctor for any health concerns. Do not delay seeking medical advice because of information from this app.
+        """)
 
     if 'messages' not in st.session_state:
         st.session_state.messages = []
